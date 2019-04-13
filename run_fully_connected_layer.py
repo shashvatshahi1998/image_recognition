@@ -35,7 +35,7 @@ print()
 IMAGE_PIXELS = 3072
 CLASSES = 10
 
-beginTime = time.time()
+begin_time = time.time()
 
 # Put logs for each run in seperate directory
 
@@ -98,6 +98,6 @@ with tf.Session() as sess:
         test_accuracy = sess.run(accuracy,feed_dict={images_placeholder:data_sets['images_test'],labels_placeholder:data_sets['labels_test']})
         print('Test accuracy {:g}'.format(test_accuracy))
 
-endTime = time.time()
-print('Total time: {:5.2f}s'.format(endTime - beginTime))
+end_time = time.time()
+print('Total time: {:5.2f}s'.format(end_time - begin_time))
                   
